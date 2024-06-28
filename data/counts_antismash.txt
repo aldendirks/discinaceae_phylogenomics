@@ -1,0 +1,76 @@
+Label	Species	Name_full	Name_partial	NRPS	PKS	Hybrid	Terpene	RiPP	Other
+Sample_4152-AD-1-filtered	Gyromitra ancilis	Gyromitra ancilis MICH352026 USA-MI	Gyromitra ancilis MICH352026	6	0	1	5	1	1
+Sample_4152-AD-2-filtered	Gyromitra venenata	Gyromitra venenata UM1613 USA-MI	Gyromitra venenata UM1613	6	1	1	5	1	0
+Sample_4152-AD-3-filtered	Gyromitra melaleucoides	Gyromitra melaleucoides MICH352039 USA-OR	Gyromitra melaleucoides MICH352039	5	3	1	7	0	1
+Sample_4152-AD-4-filtered	Gyromitra montana	Gyromitra montana MICH352043 USA-OR	Gyromitra montana MICH352043	5	1	1	4	2	1
+Sample_4152-AD-5-filtered	Gyromitra brunnea	Gyromitra brunnea MICH352054 USA-MI	Gyromitra brunnea MICH352054	5	0	2	4	1	1
+Sample_4152-AD-7-filtered	Gyromitra korfii	Gyromitra korfii MICH352062 USA-IN	Gyromitra korfii MICH352062	5	1	1	4	1	1
+Sample_4152-AD-9-filtered	Gyromitra splendida	Gyromitra splendida MICH25554 USA-MI	Gyromitra splendida MICH25554	7	1	1	4	2	0
+Sample_4981-AD-1-filtered	Gyromitra sphaerospora	Gyromitra sphaerospora UM1703 Canada	Gyromitra sphaerospora UM1703	7	1	1	5	1	0
+Sample_4981-AD-2-filtered	Gyromitra californica	Gyromitra californica UM1686 USA-WA	Gyromitra californica UM1686	6	1	1	5	1	0
+Sample_4981-AD-3-filtered	Gyromitra splendida	Gyromitra splendida UM1688 USA-WA	Gyromitra splendida UM1688	7	1	1	5	1	0
+Sample_4981-AD-4-filtered	Gyromitra infula	Gyromitra infula UM1689 USA-WA	Gyromitra infula UM1689	7	1	1	5	2	0
+Sample_4981-AD-5-filtered	Gyromitra sp. 9	Gyromitra sp. 9 UM1691 USA-CA	Gyromitra sp. 9 UM1691	7	1	2	5	2	1
+Sample_4981-AD-6-filtered	Gyromitra americanigigas	Gyromitra americanigigas MICH352016 USA-MI	Gyromitra americanigigas MICH352016	5	1	1	4	2	1
+Sample_4981-AD-7-filtered	Gyromitra leucoxantha	Gyromitra leucoxantha MICH352087 USA-NY	Gyromitra leucoxantha MICH352087	6	0	1	4	5	1
+Sample_4981-AD-8-filtered	Gyromitra caroliniana	Gyromitra caroliniana MICH352092 USA-MO	Gyromitra caroliniana MICH352092	4	0	1	4	2	1
+Sample_4981-AD-9-filtered	Hydnotrya cubispora	Gyromitra cubispora FLAS-F-62913 Scotland	Gyromitra cubispora FLAS-F-62913	4	1	1	5	1	0
+Sample_4981-AD-10-filtered	Gyromitra antarctica	Gyromitra antarctica FLAS-F-65994 Chile	Gyromitra antarctica FLAS-F-65994	6	1	1	5	1	0
+Sample_4981-AD-11-filtered	Gyromitra sphaerospora	Gyromitra sphaerospora MICH25703 USA-MI	Gyromitra sphaerospora MICH25703	8	1	1	5	1	0
+Sample_4981-AD-12-filtered	Gyromitra ambigua	Gyromitra ambigua MICH28519 USA-AZ	Gyromitra ambigua MICH28519	8	1	1	5	2	1
+Sample_4981-AD-13-filtered	Gyromitra mcknightii	Gyromitra mcknightii MICH28557 USA-AZ	Gyromitra mcknightii MICH28557	6	0	1	4	1	1
+Sample_4981-AD-14-filtered	Gyromitra sp. 6	Gyromitra sp. 6 MICH4614 USA-ID	Gyromitra sp. 6 MICH4614	6	2	0	4	2	1
+Sample_4981-AD-15-filtered	Hydnotrya cerebriformis	Gyromitra cerebriformis MICH67763 USA-AZ	Gyromitra cerebriformis MICH67763	4	1	1	6	0	0
+Sample_6977-AD-1-filtered	Gyromitra venenata	Gyromitra venenata UM1678 USA-MI	Gyromitra venenata UM1678	6	1	1	5	1	0
+Sample_6977-AD-2-filtered	Gyromitra korfii	Gyromitra korfii MICH352049 USA-PA	Gyromitra korfii MICH352049	6	1	1	4	2	1
+Sample_6977-AD-3-filtered	Gyromitra venenata	Gyromitra venenata MICH352070 Canada-QC	Gyromitra venenata MICH352070	6	1	1	5	1	0
+Sample_6977-AD-4-filtered	Gyromitra warnei	Gyromitra warnei MICH352073 USA-MI	Gyromitra warnei MICH352073	6	0	1	5	1	1
+Sample_6977-AD-5-filtered	Gyromitra ancilis	Gyromitra ancilis MICH352081 USA-PA	Gyromitra ancilis MICH352081	6	0	1	5	1	1
+Sample_6977-AD-6-filtered	Gyromitra sp. 2	Gyromitra sp. 2 MICH346448 Canada-BC	Gyromitra sp. 2 MICH346448	5	1	1	4	0	1
+Sample_6977-AD-7-filtered	Gyromitra sp. 4	Gyromitra sp. 4 MICH346481 USA-OR	Gyromitra sp. 4 MICH346481	7	1	0	5	2	1
+Sample_6977-AD-8-filtered	Gyromitra sp. 6	Gyromitra sp. 6 MICH346452 USA-ID	Gyromitra sp. 6 MICH346452	0	0	0	0	0	0
+Sample_6977-AD-9-filtered	Gyromitra sp. 11	Gyromitra sp. 11 MICH346502 USA-WA	Gyromitra sp. 11 MICH346502	6	0	1	5	1	1
+Sample_6977-AD-10-filtered	Gyromitra persicula	Gyromitra persicula MICH346504 USA-WA	Gyromitra persicula MICH346504	6	0	1	4	4	1
+Sample_6977-AD-11-filtered	Gyromitra venenata	Gyromitra venenata MICH346486 USA-WA	Gyromitra venenata MICH346486	6	1	1	5	1	0
+Sample_6977-AD-12-filtered	Gyromitra anthracobia	Gyromitra anthracobia UM1716 USA-OR	Gyromitra anthracobia UM1716	8	0	1	3	1	0
+Sample_6977-AD-13-filtered	Gyromitra ambigua	Gyromitra ambigua UM1693 USA-southwest	Gyromitra ambigua UM1693	8	1	1	5	2	0
+Sample_6977-AD-14-filtered	Hydnotrya sp. 1	Gyromitra sp. 1 FLAS-F-59196 USA-NH	Gyromitra sp. 1 FLAS-F-59196	3	0	1	4	0	0
+Sample_6977-AD-15-filtered	Hydnotrya sp. 2	Gyromitra sp. 5 FLAS-F-59198 USA-NH	Gyromitra sp. 5 FLAS-F-59198	4	1	1	5	0	0
+Sample_6977-AD-16-filtered	Hydnotrya variiformis	Gyromitra variiformis FLAS-F-60223 USA-CA	Gyromitra variiformis FLAS-F-60223	4	1	1	5	0	0
+Sample_6977-AD-17-filtered	Gyromitra larryi	Gyromitra larryi FLAS-F-61941 USA-WA	Gyromitra larryi FLAS-F-61941	6	1	1	3	1	1
+Sample_6977-AD-18-filtered	Gyromitra antarctica	Gyromitra antarctica FLAS-F-63725 Argentina	Gyromitra antarctica FLAS-F-63725	6	1	1	4	1	0
+Sample_6977-AD-19-filtered	Gyromitra sp. 8	Gyromitra sp. 8 MICH4601 USA-ID	Gyromitra sp. 8 MICH4601	6	0	1	5	1	1
+Sample_6977-AD-20-filtered	Gyromitra melaleucoides	Gyromitra melaleucoides MICH1455 USA-CO	Gyromitra melaleucoides MICH1455	5	2	1	7	0	1
+Sample_6977-AD-22-filtered	Gyromitra leucoxantha	Gyromitra leucoxantha MICH25407 USA-MI	Gyromitra leucoxantha MICH25407	2	1	0	2	4	0
+Sample_6977-AD-23-filtered	Gyromitra caroliniana	Gyromitra caroliniana MICH25515 USA-MS	Gyromitra caroliniana MICH25515	4	0	1	4	1	1
+Sample_6977-AD-25-filtered	Gyromitra brunnea	Gyromitra brunnea MICH352048 USA-KA	Gyromitra brunnea MICH352048	5	0	2	4	1	1
+Sample_6977-AD-26-filtered	Gyromitra korfii	Gyromitra korfii CUP-K-4801 USA-NY	Gyromitra korfii CUP-K-4801	0	0	0	0	0	0
+Sample_8120-AD-3-filtered	Gyromitra spinosospora	Gyromitra spinosospora LUG3910 Italy	Gyromitra spinosospora LUG3910	6	1	0	5	1	1
+Sample_8120-AD-4-filtered	Gyromitra sichuanensis	Gyromitra sichuanensis CUP-CH002522 China	Gyromitra sichuanensis CUP-CH002522	6	1	1	5	1	1
+Sample_8120-AD-5-filtered	Gyromitra grandis	Gyromitra grandis LE247912 Russia	Gyromitra grandis LE247912	5	0	1	4	1	1
+Sample_8120-AD-6-filtered	Gyromitra grandis	Gyromitra grandis TNS-F-80830 Japan	Gyromitra grandis TNS-F-80830	3	0	0	4	2	0
+Sample_8120-AD-7-filtered	Gyromitra olympiana	Gyromitra olympiana MICH345142 Germany	Gyromitra olympiana MICH345142	5	1	1	4	0	1
+Sample_8120-AD-8-filtered	Gyromitra geogenius	Gyromitra geogenius ZT-Myc0067647 Switzerland	Gyromitra geogenius ZT-Myc0067647	6	0	0	2	1	1
+Sample_8120-AD-9-filtered	Gyromitra mcknightii	Gyromitra mcknightii MICH346490 USA-WA	Gyromitra mcknightii MICH346490	6	0	1	5	1	1
+Sample_8120-AD-10-filtered	Hydnotrya sp. 3	Gyromitra sp. 3 UM1714 USA-NC	Gyromitra sp. 3 UM1714	6	0	2	3	0	0
+Sample_8120-AD-11-filtered	Gyromitra venenata	Gyromitra venenata MICH345124 France	Gyromitra venenata MICH345124	6	1	1	5	1	1
+Sample_8120-AD-12-filtered	Gyromitra gigas	Gyromitra gigas MICH345132 Germany	Gyromitra gigas MICH345132	5	1	1	4	1	1
+Sample_8120-AD-13-filtered	Gyromitra parma	Gyromitra parma MICH345134 Germany	Gyromitra parma MICH345134	6	1	0	3	1	2
+Sample_8120-AD-14-filtered	Gyromitra perlata	Gyromitra perlata MICH345136 Germany	Gyromitra perlata MICH345136	6	0	1	5	1	1
+Sample_8120-AD-15-filtered	Gyromitra parma	Gyromitra parma MICH345138 Germany	Gyromitra parma MICH345138	5	0	2	4	1	1
+Sample_8120-AD-17-filtered	Gyromitra martinii	Gyromitra martinii MICH346002 Germany	Gyromitra martinii MICH346002	5	0	1	4	1	1
+Sample_8120-AD-18-filtered	Hydnotrya bailii	Gyromitra bailii MICH345143 Germany	Gyromitra bailii MICH345143	4	1	1	4	0	0
+Sample_8120-AD-19-filtered	Gyromitra gigas	Gyromitra gigas MICH345151 Germany	Gyromitra gigas MICH345151	5	1	1	4	2	1
+Sample_8120-AD-20-filtered	Gyromitra geogenius	Gyromitra geogenius MICH345152 Germany	Gyromitra geogenius MICH345152	5	1	1	3	1	1
+Sample_8120-AD-21-filtered	Hydnotrya tulasnei	Gyromitra tulasnei MICH345153 Germany	Gyromitra tulasnei MICH345153	4	0	1	4	0	0
+Sample_9875-AD-1-filtered	Gyromitra splendida	Gyromitra splendida MICH346243 USA-AK	Gyromitra splendida MICH346243	0	0	0	0	0	0
+Sample_9875-AD-2-filtered	Gyromitra californica	Gyromitra californica ARIZ-AN017729 USA-MT	Gyromitra californica ARIZ-AN017729	6	1	1	5	1	0
+Sample_9875-AD-3-filtered	Gyromitra melaleuca	"Paradiscina melaleuca MICH346528, LY-NV2020.05.32 France"	"Paradiscina melaleuca MICH346528, LY-NV2020.05.32"	5	2	1	5	0	1
+Sample_9875-AD-4-filtered	Gyromitra persicula	Gyromitra persicula MICH346493 USA-WA	Gyromitra persicula MICH346493	7	0	1	4	4	1
+Sample_9875-AD-5-filtered	Gyromitra sp. 6	Gyromitra sp. 6 ARIZ-AN044228 USA-AZ	Gyromitra sp. 6 ARIZ-AN044228	5	1	1	4	2	1
+Sample_9875-AD-6-filtered	Gyromitra sp. 9	Gyromitra sp. 9 FLAS-F-63292 USA-WA	Gyromitra sp. 9 FLAS-F-63292	9	2	0	5	2	1
+Sample_9875-AD-7-filtered	Gyromitra sp. 13	Gyromitra sp. 13 MICH346255 USA-AK	Gyromitra sp. 13 MICH346255	5	1	1	4	1	1
+Sample_9875-AD-8-filtered	Marcelleina donadinii	Marcelleina donadinii RM2391-2014 Spain	Marcelleina donadinii RM2391-2014	6	2	1	4	0	1
+Sample_9875-AD-9-filtered	Marcelleina donadinii	Marcelleina donadinii RM2391-2016 Spain	Marcelleina donadinii RM2391-2016	6	2	1	4	0	1
+Sample_6977-AD-27-filtered	Gyromitra esculenta	Gyromitra esculenta CBS101906 Netherlands	Gyromitra esculenta CBS101906	7	1	1	5	1	0
+Sample_6977-AD-28-filtered	Gyromitra infula	Gyromitra infula GyrinfSpk-SM18 Norway	Gyromitra infula GyrinfSpk-SM18	7	1	1	5	2	1

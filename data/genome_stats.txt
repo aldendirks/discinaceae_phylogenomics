@@ -1,0 +1,76 @@
+Label	Species	Name_full	Name_partial	Size	GC	Genes	Average_gene_length	tRNA	PFAM	MEROPS	Secretion	Average_exon_length	Avg_protein_length	Exons	Transposable_elements
+Sample_4152-AD-1-filtered	Gyromitra ancilis	Gyromitra ancilis MICH352026 USA-MI	Gyromitra ancilis MICH352026	45762672	49.77	11338	1454.98	271	6078	227	690	381.72	437.75	34751	550
+Sample_4152-AD-2-filtered	Gyromitra venenata	Gyromitra venenata UM1613 USA-MI	Gyromitra venenata UM1613	44147473	46.27	11449	1435.45	271	6367	242	747	366.0	429.37	35164	838
+Sample_4152-AD-3-filtered	Gyromitra melaleucoides	Gyromitra melaleucoides MICH352039 USA-OR	Gyromitra melaleucoides MICH352039	41318832	47.7	9665	1608.12	203	5964	238	640	389.07	480.24	31968	496
+Sample_4152-AD-4-filtered	Gyromitra montana	Gyromitra montana MICH352043 USA-OR	Gyromitra montana MICH352043	42304657	49.21	11216	1528.1	223	6329	237	736	379.57	455.06	36123	385
+Sample_4152-AD-5-filtered	Gyromitra brunnea	Gyromitra brunnea MICH352054 USA-MI	Gyromitra brunnea MICH352054	38980074	50.14	10663	1463.7	195	5808	228	664	378.1	436.9	33377	464
+Sample_4152-AD-7-filtered	Gyromitra korfii	Gyromitra korfii MICH352062 USA-IN	Gyromitra korfii MICH352062	45145517	49.43	11196	1513.45	220	6146	230	703	380.34	450.62	35705	1672
+Sample_4152-AD-9-filtered	Gyromitra splendida	Gyromitra splendida MICH25554 USA-MI	Gyromitra splendida MICH25554	39273639	46.08	12109	1261.67	224	6174	246	742	339.02	374.99	35718	198
+Sample_4981-AD-1-filtered	Gyromitra sphaerospora	Gyromitra sphaerospora UM1703 Canada	Gyromitra sphaerospora UM1703	57887148	47.21	12417	1485.95	278	6566	241	743	380.73	442.5	38476	1183
+Sample_4981-AD-2-filtered	Gyromitra californica	Gyromitra californica UM1686 USA-WA	Gyromitra californica UM1686	58336588	46.9	12468	1469.7	272	6523	239	734	380.56	437.44	38386	721
+Sample_4981-AD-3-filtered	Gyromitra splendida	Gyromitra splendida UM1688 USA-WA	Gyromitra splendida UM1688	43751227	46.34	11264	1505.65	262	6464	238	760	358.1	446.52	37378	538
+Sample_4981-AD-4-filtered	Gyromitra infula	Gyromitra infula UM1689 USA-WA	Gyromitra infula UM1689	43846372	46.39	10893	1621.19	286	6607	252	767	386.79	486.5	36486	229
+Sample_4981-AD-5-filtered	Gyromitra sp. 9	Gyromitra sp. 9 UM1691 USA-CA	Gyromitra sp. 9 UM1691	42601850	46.29	10989	1571.21	285	6597	251	784	380.54	471.08	36353	178
+Sample_4981-AD-6-filtered	Gyromitra americanigigas	Gyromitra americanigigas MICH352016 USA-MI	Gyromitra americanigigas MICH352016	41625216	49.1	10920	1537.93	245	6274	233	729	378.67	458.74	35496	422
+Sample_4981-AD-7-filtered	Gyromitra leucoxantha	Gyromitra leucoxantha MICH352087 USA-NY	Gyromitra leucoxantha MICH352087	54621588	49.71	11913	1439.83	224	6217	239	637	383.29	430.09	35561	1204
+Sample_4981-AD-8-filtered	Gyromitra caroliniana	Gyromitra caroliniana MICH352092 USA-MO	Gyromitra caroliniana MICH352092	39900466	50.74	9762	1499.51	196	5583	217	616	382.59	448.52	30878	616
+Sample_4981-AD-9-filtered	Hydnotrya cubispora	Gyromitra cubispora FLAS-F-62913 Scotland	Gyromitra cubispora FLAS-F-62913	62047323	46.2	12445	1403.83	180	6064	215	547	382.91	415.71	36581	1558
+Sample_4981-AD-10-filtered	Gyromitra antarctica	Gyromitra antarctica FLAS-F-65994 Chile	Gyromitra antarctica FLAS-F-65994	43208946	46.23	11320	1506.39	251	6462	231	755	351.23	443.51	38376	536
+Sample_4981-AD-11-filtered	Gyromitra sphaerospora	Gyromitra sphaerospora MICH25703 USA-MI	Gyromitra sphaerospora MICH25703	52853928	47.36	13224	1407.18	264	7004	268	782	379.88	421.34	38625	441
+Sample_4981-AD-12-filtered	Gyromitra ambigua	Gyromitra ambigua MICH28519 USA-AZ	Gyromitra ambigua MICH28519	43896161	46.37	10974	1620.69	259	6665	254	753	383.0	482.19	37073	148
+Sample_4981-AD-13-filtered	Gyromitra mcknightii	Gyromitra mcknightii MICH28557 USA-AZ	Gyromitra mcknightii MICH28557	44037534	49.06	11055	1543.56	225	6214	229	750	375.49	459.07	36317	356
+Sample_4981-AD-14-filtered	Gyromitra sp. 6	Gyromitra sp. 6 MICH4614 USA-ID	Gyromitra sp. 6 MICH4614	44833171	48.62	11521	1481.66	208	6260	228	724	377.48	441.71	36195	328
+Sample_4981-AD-15-filtered	Hydnotrya cerebriformis	Gyromitra cerebriformis MICH67763 USA-AZ	Gyromitra cerebriformis MICH67763	63910807	46.47	12962	1355.58	187	6094	225	548	376.01	400.49	37692	3487
+Sample_6977-AD-1-filtered	Gyromitra venenata	Gyromitra venenata UM1678 USA-MI	Gyromitra venenata UM1678	44363374	46.17	11468	1435.71	278	6420	237	734	366.57	429.64	35278	744
+Sample_6977-AD-2-filtered	Gyromitra korfii	Gyromitra korfii MICH352049 USA-PA	Gyromitra korfii MICH352049	53734009	49.22	13278	1443.17	237	6654	235	817	376.54	430.57	40401	1765
+Sample_6977-AD-3-filtered	Gyromitra venenata	Gyromitra venenata MICH352070 Canada-QC	Gyromitra venenata MICH352070	43324320	46.36	11371	1474.82	259	6434	235	755	361.85	438.26	36219	657
+Sample_6977-AD-4-filtered	Gyromitra warnei	Gyromitra warnei MICH352073 USA-MI	Gyromitra warnei MICH352073	42584329	49.65	11286	1486.97	221	6177	240	751	375.04	442.6	35880	352
+Sample_6977-AD-5-filtered	Gyromitra ancilis	Gyromitra ancilis MICH352081 USA-PA	Gyromitra ancilis MICH352081	44453966	49.73	11055	1481.17	261	6134	234	711	380.88	445.46	34495	457
+Sample_6977-AD-6-filtered	Gyromitra sp. 2	Gyromitra sp. 2 MICH346448 Canada-BC	Gyromitra sp. 2 MICH346448	49726930	49.16	12072	1529.21	219	6367	234	745	378.3	449.99	38714	956
+Sample_6977-AD-7-filtered	Gyromitra sp. 4	Gyromitra sp. 4 MICH346481 USA-OR	Gyromitra sp. 4 MICH346481	42818294	48.86	11747	1458.3	232	6378	242	806	374.47	434.7	36552	231
+Sample_6977-AD-8-filtered	Gyromitra sp. 6	Gyromitra sp. 6 MICH346452 USA-ID	Gyromitra sp. 6 MICH346452												
+Sample_6977-AD-9-filtered	Gyromitra sp. 11	Gyromitra sp. 11 MICH346502 USA-WA	Gyromitra sp. 11 MICH346502	42767172	49.87	11226	1479.71	240	6110	231	710	374.32	442.15	35759	756
+Sample_6977-AD-10-filtered	Gyromitra persicula	Gyromitra persicula MICH346504 USA-WA	Gyromitra persicula MICH346504	49235540	49.62	11649	1482.21	219	6263	243	670	377.93	438.81	36403	562
+Sample_6977-AD-11-filtered	Gyromitra venenata	Gyromitra venenata MICH346486 USA-WA	Gyromitra venenata MICH346486	41364786	46.37	11401	1461.38	261	6450	234	783	362.78	435.36	36207	253
+Sample_6977-AD-12-filtered	Gyromitra anthracobia	Gyromitra anthracobia UM1716 USA-OR	Gyromitra anthracobia UM1716	40776142	48.86	10327	1506.21	367	6088	232	797	380.87	453.61	32783	155
+Sample_6977-AD-13-filtered	Gyromitra ambigua	Gyromitra ambigua UM1693 USA-southwest	Gyromitra ambigua UM1693	44132955	46.26	10934	1549.12	280	6485	242	720	392.82	467.16	34568	300
+Sample_6977-AD-14-filtered	Hydnotrya sp. 1	Gyromitra sp. 1 FLAS-F-59196 USA-NH	Gyromitra sp. 1 FLAS-F-59196	64562738	45.88	12687	1451.18	182	6368	218	513	382.07	428.59	38692	1736
+Sample_6977-AD-15-filtered	Hydnotrya sp. 2	Gyromitra sp. 5 FLAS-F-59198 USA-NH	Gyromitra sp. 5 FLAS-F-59198	70283587	46.05	13246	1307.2	175	6033	218	497	390.18	389.17	35916	3922
+Sample_6977-AD-16-filtered	Hydnotrya variiformis	Gyromitra variiformis FLAS-F-60223 USA-CA	Gyromitra variiformis FLAS-F-60223	59340977	45.8	11461	1438.58	187	5906	216	520	379.02	424.02	34937	1690
+Sample_6977-AD-17-filtered	Gyromitra larryi	Gyromitra larryi FLAS-F-61941 USA-WA	Gyromitra larryi FLAS-F-61941	44371265	48.84	11000	1593.87	263	6393	239	803	384.39	476.36	36275	357
+Sample_6977-AD-18-filtered	Gyromitra antarctica	Gyromitra antarctica FLAS-F-63725 Argentina	Gyromitra antarctica FLAS-F-63725	43230374	46.26	11657	1462.28	277	6522	234	770	353.92	433.27	38159	484
+Sample_6977-AD-19-filtered	Gyromitra sp. 8	Gyromitra sp. 8 MICH4601 USA-ID	Gyromitra sp. 8 MICH4601	41894554	48.71	10734	1509.33	225	6071	229	737	381.98	452.72	34098	283
+Sample_6977-AD-20-filtered	Gyromitra melaleucoides	Gyromitra melaleucoides MICH1455 USA-CO	Gyromitra melaleucoides MICH1455	41402147	47.65	10291	1542.27	179	6056	238	668	388.39	460.38	32933	487
+Sample_6977-AD-22-filtered	Gyromitra leucoxantha	Gyromitra leucoxantha MICH25407 USA-MI	Gyromitra leucoxantha MICH25407	24792562	49.85	6666	1173.93	104	3182	126	308	368.86	356.03	16548	512
+Sample_6977-AD-23-filtered	Gyromitra caroliniana	Gyromitra caroliniana MICH25515 USA-MS	Gyromitra caroliniana MICH25515	39270901	50.68	9834	1490.12	201	5543	220	612	377.36	444.77	31358	413
+Sample_6977-AD-25-filtered	Gyromitra brunnea	Gyromitra brunnea MICH352048 USA-KA	Gyromitra brunnea MICH352048	40059287	50.15	10515	1469.11	211	5769	231	669	383.45	440.07	32354	606
+Sample_6977-AD-26-filtered	Gyromitra korfii	Gyromitra korfii CUP-K-4801 USA-NY	Gyromitra korfii CUP-K-4801												
+Sample_8120-AD-3-filtered	Gyromitra spinosospora	Gyromitra spinosospora LUG3910 Italy	Gyromitra spinosospora LUG3910	37292129	49.49	10377	1470.71	214	5830	225	688	372.52	438.15	33040	559
+Sample_8120-AD-4-filtered	Gyromitra sichuanensis	Gyromitra sichuanensis CUP-CH002522 China	Gyromitra sichuanensis CUP-CH002522	46133595	46.66	12083	1491.99	283	6801	250	830	381.67	447.86	37876	450
+Sample_8120-AD-5-filtered	Gyromitra grandis	Gyromitra grandis LE247912 Russia	Gyromitra grandis LE247912	37348570	50.15	9795	1508.47	194	5676	224	651	384.92	452.76	31085	338
+Sample_8120-AD-6-filtered	Gyromitra grandis	Gyromitra grandis TNS-F-80830 Japan	Gyromitra grandis TNS-F-80830	32323839	49.54	11134	1084.88	167	5057	216	524	347.65	327.42	27596	413
+Sample_8120-AD-7-filtered	Gyromitra olympiana	Gyromitra olympiana MICH345142 Germany	Gyromitra olympiana MICH345142	48779977	48.99	11892	1462.11	220	6318	230	755	380.93	435.54	36438	1093
+Sample_8120-AD-8-filtered	Gyromitra geogenius	Gyromitra geogenius ZT-Myc0067647 Switzerland	Gyromitra geogenius ZT-Myc0067647	40124109	48.84	12045	1200.58	196	6041	239	680	349.22	360.47	32524	525
+Sample_8120-AD-9-filtered	Gyromitra mcknightii	Gyromitra mcknightii MICH346490 USA-WA	Gyromitra mcknightii MICH346490	46635696	48.98	12052	1466.69	252	6410	240	804	373.94	438.09	37927	426
+Sample_8120-AD-10-filtered	Hydnotrya sp. 3	Gyromitra sp. 3 UM1714 USA-NC	Gyromitra sp. 3 UM1714	68375779	46.71	13036	1356.69	188	5947	210	466	393.01	405.31	36144	3915
+Sample_8120-AD-11-filtered	Gyromitra venenata	Gyromitra venenata MICH345124 France	Gyromitra venenata MICH345124	43532792	46.21	11288	1486.18	271	6431	237	756	363.38	442.62	36231	512
+Sample_8120-AD-12-filtered	Gyromitra gigas	Gyromitra gigas MICH345132 Germany	Gyromitra gigas MICH345132	42262916	49.1	10696	1541.08	248	6257	238	715	383.31	462.92	34295	345
+Sample_8120-AD-13-filtered	Gyromitra parma	Gyromitra parma MICH345134 Germany	Gyromitra parma MICH345134	38158458	49.71	10367	1457.13	196	5656	223	656	380.24	436.91	32338	367
+Sample_8120-AD-14-filtered	Gyromitra perlata	Gyromitra perlata MICH345136 Germany	Gyromitra perlata MICH345136	42459878	49.58	10728	1515.01	226	6086	226	727	383.85	454.91	34040	246
+Sample_8120-AD-15-filtered	Gyromitra parma	Gyromitra parma MICH345138 Germany	Gyromitra parma MICH345138	41273449	50.02	10828	1481.35	202	5915	227	687	381.34	442.68	34062	625
+Sample_8120-AD-17-filtered	Gyromitra martinii	Gyromitra martinii MICH346002 Germany	Gyromitra martinii MICH346002	45376454	49.8	11355	1442.26	218	5970	222	664	384.23	432.4	34095	831
+Sample_8120-AD-18-filtered	Hydnotrya bailii	Gyromitra bailii MICH345143 Germany	Gyromitra bailii MICH345143	59192601	46.64	12786	1330.16	177	5906	215	500	385.51	396.36	35577	2070
+Sample_8120-AD-19-filtered	Gyromitra gigas	Gyromitra gigas MICH345151 Germany	Gyromitra gigas MICH345151	42842841	49.11	10998	1524.01	245	6289	233	713	383.75	457.57	34719	383
+Sample_8120-AD-20-filtered	Gyromitra geogenius	Gyromitra geogenius MICH345152 Germany	Gyromitra geogenius MICH345152	42356302	49.07	10847	1558.22	211	6191	237	813	386.26	464.18	34968	400
+Sample_8120-AD-21-filtered	Hydnotrya tulasnei	Gyromitra tulasnei MICH345153 Germany	Gyromitra tulasnei MICH345153	58478920	46.28	12392	1392.49	170	6007	215	482	375.72	410.86	36840	2175
+Sample_9875-AD-1-filtered	Gyromitra splendida	Gyromitra splendida MICH346243 USA-AK	Gyromitra splendida MICH346243												325
+Sample_9875-AD-2-filtered	Gyromitra californica	Gyromitra californica ARIZ-AN017729 USA-MT	Gyromitra californica ARIZ-AN017729	48411670	47.37	10848	1567.33	255	6400	244	712	384.03	467.29	35186	211
+Sample_9875-AD-3-filtered	Gyromitra melaleuca	"Paradiscina melaleuca MICH346528, LY-NV2020.05.32 France"	"Paradiscina melaleuca MICH346528, LY-NV2020.05.32"	49207899	48.28	12124	1570.01	180	7062	251	901	378.25	464.53	40265	225
+Sample_9875-AD-4-filtered	Gyromitra persicula	Gyromitra persicula MICH346493 USA-WA	Gyromitra persicula MICH346493	50557283	49.64	11437	1514.9	224	6211	234	673	377.93	448.32	36322	795
+Sample_9875-AD-5-filtered	Gyromitra sp. 6	Gyromitra sp. 6 ARIZ-AN044228 USA-AZ	Gyromitra sp. 6 ARIZ-AN044228	47077282	48.66	11941	1507.32	227	6472	235	794	376.86	447.02	38181	537
+Sample_9875-AD-6-filtered	Gyromitra sp. 9	Gyromitra sp. 9 FLAS-F-63292 USA-WA	Gyromitra sp. 9 FLAS-F-63292	42569065	46.4	10987	1580.04	289	6640	254	758	381.79	474.56	36413	113
+Sample_9875-AD-7-filtered	Gyromitra sp. 13	Gyromitra sp. 13 MICH346255 USA-AK	Gyromitra sp. 13 MICH346255	42022710	49.14	10829	1536.02	270	6249	238	700	385.91	462.32	34302	394
+Sample_9875-AD-8-filtered	Marcelleina donadinii	Marcelleina donadinii RM2391-2014 Spain	Marcelleina donadinii RM2391-2014	42239447	46.42	11009	1603.47	180	6729	251	915	377.74	477.95	37485	285
+Sample_9875-AD-9-filtered	Marcelleina donadinii	Marcelleina donadinii RM2391-2016 Spain	Marcelleina donadinii RM2391-2016	41854071	46.48	10817	1626.0	158	6656	251	909	378.2	483.16	37360	261
+Sample_6977-AD-27-filtered	Gyromitra esculenta	Gyromitra esculenta CBS101906 Netherlands	Gyromitra esculenta CBS101906	45044280	45.67	11310	1566.22	245	6462	230	767	335.21	452.32	41701	597
+Sample_6977-AD-28-filtered	Gyromitra infula	Gyromitra infula GyrinfSpk-SM18 Norway	Gyromitra infula GyrinfSpk-SM18	45877806	46.69	11268	1598.53	270	6670	249	781	389.01	478.7	37056	741
