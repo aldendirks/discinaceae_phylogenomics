@@ -17,10 +17,6 @@
 module load Bioinformatics
 module load bbtools/38.96
 
-# Set variables
-PROJECT_DIR=$1
-SAMPLE_LIST="$PROJECT_DIR/samples.tsv"
-
 # Get coverage
 while IFS=$'\t' read -r -a samples_array
 do

@@ -19,10 +19,6 @@ module load Bioinformatics
 module load fastqc/0.11.9-p6ckgle
 module load trimmomatic/0.36
 
-# Set variables
-PROJECT_DIR=$1
-SAMPLE_LIST="$PROJECT_DIR/samples.tsv"
-
 # Make directories
 mkdir -p $PROJECT_DIR/fastqc/raw $PROJECT_DIR/fastqc/trimmed $PROJECT_DIR/seqs/trimmed
 

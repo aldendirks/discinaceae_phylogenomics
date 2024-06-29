@@ -22,9 +22,8 @@ module load R/4.2.0
 
 # Set variables
 CORES="$SLURM_NTASKS"
-PROJECT_DIR=$1
-BATCH=$2
-SAMPLE=$3
+BATCH=$1
+SAMPLE=$2
 CLASS_ID=6 # you will need to change this number depending on the class given to your manual ESOM selection. 
 
 # Run scgid kmers extract module and get consensus

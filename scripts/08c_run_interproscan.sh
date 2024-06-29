@@ -21,16 +21,14 @@ source /nfs/turbo/lsa-tyjames/funannotate/envvars.txt # sets paths
 source /nfs/turbo/lsa-tyjames/funannotate/envvars.txt # sets paths
 
 ### Bash command line input
-while getopts p:s:i:g: flag
+while getopts s:i:g: flag
 do
     case "${flag}" in
-        p) PROJECT_DIR=${OPTARG};;
         s) SPECIES=${OPTARG};;
         i) ISOLATE=${OPTARG};;
         g) GENOME=${OPTARG};;
     esac
 done
-echo "Project directory: $PROJECT_DIR"
 echo "Species: $SPECIES"
 echo "Isolate/accession: $ISOLATE"
 echo "FASTA file: $GENOME"

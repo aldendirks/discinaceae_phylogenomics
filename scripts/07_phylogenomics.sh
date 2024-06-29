@@ -20,10 +20,6 @@ module load fasttree/2.1.10
 
 # Set variables
 CORES="$SLURM_NTASKS"
-PROJECT_DIR="$1"
-ASTRAL_LIB_PATH="$2"
-ASTRAL_JAR_PATH="$3"
-SAMPLE_LIST="$PROJECT_DIR/samples.tsv"
 OUTPUT_DIR="$PROJECT_DIR/phylogenomics"
 RUNS_DIR="$OUTPUT_DIR/runs"
 BUSCO_PHYLO_RESULTS_DIR="$OUTPUT_DIR/busco_phylogenomics_results"

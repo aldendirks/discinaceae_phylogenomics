@@ -4,9 +4,6 @@
 module load Bioinformatics
 module load sratoolkit/2.10.9-udmejx7
 
-# Set variables
-PROJECT_DIR=$1
-
 # Get raw reads with SRA Toolkit
 mkdir -p $PROJECT_DIR/seqs/raw/sra
 cd $PROJECT_DIR/seqs/raw/sra

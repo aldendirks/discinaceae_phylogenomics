@@ -19,9 +19,8 @@ module load python/3.10.4
 module load R/4.2.0
 
 # Set variables
-PROJECT_DIR=$1
-BATCH=$2
-SAMPLE=$3
+BATCH=$1
+SAMPLE=$2
 
 # Run scgid gct module
 OUTPUT_DIR="$PROJECT_DIR/scgid/Sample_${BATCH}-AD-${SAMPLE}-meta"

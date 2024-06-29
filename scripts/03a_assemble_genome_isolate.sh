@@ -18,9 +18,8 @@ module load python/3.10.4
 module load spades/3.15.5-jhe6qq2
 
 # Set variables
-PROJECT_DIR=$1
-BATCH=$2
-SAMPLE=$3
+BATCH=$1
+SAMPLE=$2
 
 # Run SPAdes isolate
 #   NOTE: Isolate is only assembler (no read correction, do not run on corrected reads)

@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # Set variables
-PROJECT_DIR=$1
-SAMPLE_LIST="$PROJECT_DIR/samples.tsv"
 OUTPUT_DIR="$PROJECT_DIR/summary"
 mkdir -p $OUTPUT_DIR/cazy_sample_counts
 

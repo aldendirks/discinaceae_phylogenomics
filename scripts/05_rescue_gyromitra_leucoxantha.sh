@@ -21,7 +21,6 @@ module load spades/3.15.5-jhe6qq2
 
 # Set variables
 CORES="$SLURM_NTASKS"
-PROJECT_DIR=$1
 BATCH="6977"
 SAMPLE="22"
 REFERENCE="$PROJECT_DIR/scgid/Sample_4981-AD-7-scgid-meta/meta_scgid_output/consensus/meta.consensus.filtered.assembly.fasta"

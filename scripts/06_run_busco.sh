@@ -17,8 +17,7 @@ module load Bioinformatics
 module load busco/5.5.0
 
 # Set variables
-PROJECT_DIR=$1
-SAMPLE=$2
+SAMPLE=$1
 NAME=$(basename ${SAMPLE%.fasta})
 
 # Run BUSCO

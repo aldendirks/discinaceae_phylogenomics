@@ -17,15 +17,13 @@
 source /nfs/turbo/lsa-tyjames/funannotate/envvars.txt # sets paths
 
 ### Bash command line input
-while getopts p:g:l: flag
+while getopts g:l: flag
 do
     case "${flag}" in
-        p) PROJECT_DIR=${OPTARG};;
         g) GENOME=${OPTARG};;
         l) LOCUS_TAG=${OPTARG};;
     esac
 done
-echo "Project directory: $PROJECT_DIR"
 echo "FASTA file: $GENOME"
 echo "Locus tag prefix: $LOCUS_TAG"
 

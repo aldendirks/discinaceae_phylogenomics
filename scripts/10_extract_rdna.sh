@@ -18,10 +18,6 @@ module load bedtools2/2.30.0-svcfwbm
 module load blast-plus/2.12.0-fuhtx75
 module load python/3.10.4
 
-# Set variables
-PROJECT_DIR=$1
-SAMPLE_LIST="$PROJECT_DIR/samples.tsv"
-
 # Extract rDNA
 while IFS=$'\t' read -r -a samples_array
 do

@@ -12,7 +12,7 @@
 	* 2.5. [Rescue *Gyromitra leucoxantha* MICH25407](#RescueGyromitraleucoxanthaMICH25407)
 	* 2.6. [Further contaminant filtering with NCBI Foreign Contamination Screen](#FurthercontaminantfilteringwithNCBIForeignContaminationScreen)
 	* 2.7. [TO DO: Organize genomes](#TODO:Organizegenomes)
-	* 2.8. [Download outgroup genomes](#Downloadoutgroupgenomes)
+	* 2.8. [TO DO: Download outgroup genomes](#TODO:Downloadoutgroupgenomes)
 	* 2.9. [Calculate genome coverage](#Calculategenomecoverage)
 	* 2.10. [Extract rDNA sequences](#ExtractrDNAsequences)
 	* 2.11. [Run BUSCO](#RunBUSCO)
@@ -23,7 +23,10 @@
 	* 3.3. [Assign gene function](#Assigngenefunction)
 	* 3.4. [Complete annotation](#Completeannotation)
 	* 3.5. [Compile genome stats](#Compilegenomestats)
-* 4. [TO DO: Mating system analysis](#TODO:Matingsystemanalysis)
+* 4. [Mating system analysis](#Matingsystemanalysis)
+	* 4.1. [Soft link proteomes into one directory](#Softlinkproteomesintoonedirectory)
+	* 4.2. [Make proteomes BLAST database](#MakeproteomesBLASTdatabase)
+	* 4.3. [Identify MAT genes and create clinker map](#IdentifyMATgenesandcreateclinkermap)
 * 5. [TO DO: Figures and statistical analysis](#TODO:Figuresandstatisticalanalysis)
 	* 5.1. [TO DO: Copy data](#TODO:Copydata)
 * 6. [Supplementary](#Supplementary)
@@ -55,6 +58,7 @@ The following software need to be installed and findable in $PATH.
 * `BBTools` 38.96
 * `bedtools` 2.30.0
 * `BUSCO` 5.5.0
+* `Clinker` 0.0.28
 * `CUDA` 11.5.1 (for computing on GPUs with SCGid)
 * `FastQC` 0.11.9
 * `FastTree` 2.1.10
@@ -80,18 +84,19 @@ The following software need to be installed and findable in $PATH.
 
 ###  1.2. <a name='Setupdirectorystructure'></a>Set up directory structure
 
-The directory containing this README.md file will be the project directory. 
+The directory containing this README.md file will be the project directory. Change to the parent directory and run the code below to clone the GitHub directory `discinaceae_phylogenomics`. 
 
 ```
-PROJECT_DIR="/absolute/path/to/this/README/dir"
+git clone https://github.com/aldendirks/discinaceae_phylogenomics.git
+export PROJECT_DIR="$PWD/discinaceae_phylogenomics"
 cd $PROJECT_DIR
-mkdir -p antismash coverage busco data fastqc funannotate genomes itsx phylogenomics quast rdna scgid seqs spades summary
+mkdir -p antismash busco coverage blastdb data fastqc funannotate genomes itsx mat phylogenomics quast rdna scgid seqs spades summary
 ```
 
 Make sure the list of samples is unix compatible and ends with a space.
 
 ```
-SAMPLE_LIST="$PROJECT_DIR/samples.tsv"
+export SAMPLE_LIST="$PROJECT_DIR/misc/samples.tsv"
 dos2unix $SAMPLE_LIST
 function file_ends_with_newline() {
     [[ $(tail -c1 "$1" | wc -l) -gt 0 ]]
@@ -111,13 +116,13 @@ Skip to step 2.7 if you'd like to go right to downloading the assembled genomes 
 Download raw reads for processing. Further information on downloading data from NCBI SRA using `SRA Toolkit` can be found [here](https://github.com/ncbi/sra-tools/wiki/08.-prefetch-and-fasterq-dump).
 
 ```
-bash $PROJECT_DIR/scripts/0_download_sra_data.sh $PROJECT_DIR
+bash $PROJECT_DIR/scripts/00_download_sra_data.sh
 ```
 
 ###  2.2. <a name='Checkreadqualityandtrimadapters'></a>Check read quality and trim adapters
 
 ```
-sbatch $PROJECT_DIR/scripts/1_check_read_quality_and_trim.sh $PROJECT_DIR
+sbatch $PROJECT_DIR/scripts/01_check_read_quality_and_trim.sh
 ```
 
 ###  2.3. <a name='Correctreadsandassemble'></a>Correct reads and assemble
@@ -130,7 +135,7 @@ do
     if [ "${samples_array[7]}" = "ingroup" ] && [ "${samples_array[14]}" != "culture" ]; then
         BATCH="${samples_array[1]}"
         SAMPLE="${samples_array[2]}"
-        sbatch $PROJECT_DIR/scripts/2_correct_read_errors.sh $PROJECT_DIR $BATCH $SAMPLE
+        sbatch $PROJECT_DIR/scripts/02_correct_read_errors.sh $BATCH $SAMPLE
     fi
 done < $SAMPLE_LIST
 ```
@@ -144,9 +149,9 @@ do
     SAMPLE="${samples_array[2]}"
     if [ "$BATCH" != "JGI" ] && [ "$BATCH" != "NCBI" ]; then
         if [ "${samples_array[14]}" = "culture" ]; then
-            sbatch $PROJECT_DIR/scripts/3a_assemble_genome_isolate.sh $PROJECT_DIR $BATCH $SAMPLE
+            sbatch $PROJECT_DIR/scripts/03a_assemble_genome_isolate.sh $BATCH $SAMPLE
         else
-            sbatch $PROJECT_DIR/scripts/3b_assemble_genome_meta.sh $PROJECT_DIR $BATCH $SAMPLE
+            sbatch $PROJECT_DIR/scripts/03b_assemble_genome_meta.sh $BATCH $SAMPLE
         fi
     fi
 done < $SAMPLE_LIST
@@ -164,7 +169,7 @@ do
     BATCH="${samples_array[1]}"
     SAMPLE="${samples_array[2]}"
     if [ "$BATCH" != "JGI" ] && [ "$BATCH" != "NCBI" ] && [ "${samples_array[14]}" != "culture" ]; then
-        sbatch $PROJECT_DIR/scripts/4a_run_scgid_gct.sh $PROJECT_DIR $BATCH $SAMPLE
+        sbatch $PROJECT_DIR/scripts/04a_run_scgid_gct.sh $BATCH $SAMPLE
     fi
 done < $SAMPLE_LIST
 ```
@@ -177,7 +182,7 @@ do
     BATCH="${samples_array[1]}"
     SAMPLE="${samples_array[2]}"
     if [ "$BATCH" != "JGI" ] && [ "$BATCH" != "NCBI" ] && [ "${samples_array[14]}" != "culture" ]; then
-        sbatch $PROJECT_DIR/scripts/4b_run_scgid_codons.sh $PROJECT_DIR $BATCH $SAMPLE
+        sbatch $PROJECT_DIR/scripts/04b_run_scgid_codons.sh $BATCH $SAMPLE
     fi
 done < $SAMPLE_LIST
 ```
@@ -190,7 +195,7 @@ do
     BATCH="${samples_array[1]}"
     SAMPLE="${samples_array[2]}"
     if [ "$BATCH" != "JGI" ] && [ "$BATCH" != "NCBI" ] && [ "${samples_array[14]}" != "culture" ]; then
-        sbatch $PROJECT_DIR/scripts/4c_run_scgid_kmers.sh $PROJECT_DIR $BATCH $SAMPLE
+        sbatch $PROJECT_DIR/scripts/04c_run_scgid_kmers.sh $BATCH $SAMPLE
     fi
 done < $SAMPLE_LIST
 ```
@@ -203,7 +208,7 @@ Manually select regions from the ESOM map. See the [`SCGid` GitHub page](https:/
 * Under the "Classes" tab, I like to change the color of Fungi to something that pops and is easy to trace, like neon yellow. Change the color of any class by selecting the color next to the text. 
 * Bold the Fungi dots so they are easier to see by clicking the box on the left. 
 * Right click to finalize your the selection after you click around the fungi blobs. 
-* I'd recommend using an external mouse to make your selections. It is easy to make an accidental right click when you are clicking with a trackpad 
+* I'd recommend using an external mouse to make your selections. It is easy to make an accidental right click when you are clicking with a trackpad. 
 
 Finally, finish the kmers module and generate a consensus sequence. Note, the ESOM selected class ID is set to "6" within the script. While this should usually be the correct class, you might need to change it so it matches your selection. 
 
@@ -213,7 +218,7 @@ do
     BATCH="${samples_array[1]}"
     SAMPLE="${samples_array[2]}"
     if [ "$BATCH" != "JGI" ] && [ "$BATCH" != "NCBI" ] && [ "${samples_array[14]}" != "culture" ]; then
-        sbatch $PROJECT_DIR/scripts/4d_run_scgid_kmers_extract.sh $PROJECT_DIR $BATCH $SAMPLE
+        sbatch $PROJECT_DIR/scripts/04d_run_scgid_kmers_extract.sh $BATCH $SAMPLE
     fi
 done < $SAMPLE_LIST
 ```
@@ -223,7 +228,7 @@ done < $SAMPLE_LIST
 This genome is the only one with significant fungal contamination. `SCGid` does not filter out the contaminant fungal genome. The *Gyromitra leucoxantha* genome is extracted by BLASTing the raw reads against the assembled and filtered *G. leucoxantha* MICH352087 genome and using those hits in assembly. 
 
 ```
-sbatch $PROJECT_DIR/scripts/5_rescue_gyromitra_leucoxantha.sh $PROJECT_DIR
+sbatch $PROJECT_DIR/scripts/05_rescue_gyromitra_leucoxantha.sh
 ```
 
 ###  2.6. <a name='FurthercontaminantfilteringwithNCBIForeignContaminationScreen'></a>Further contaminant filtering with NCBI Foreign Contamination Screen
@@ -232,17 +237,19 @@ Upon submission to NCBI, it was found that `SCGid` did not completely filter out
 
 ###  2.7. <a name='TODO:Organizegenomes'></a>TO DO: Organize genomes
 
-TO DO: check if WGS accession can be downloaded that way, or only accessions that start wtih GCA (what's teh difference?)
+TO DO: Get GenBank accession numbers and make sure they can be downloaded
+
+Skip these first two blocks of code if you would like to go right to downloading the assembled genomes. 
 
 Softlink the assembled genomes into the `genomes` directory with a new name.
 
 ```
-GENOMES_DIR="$PROJECT_DIR/genomes"
+export GENOMES_DIR="$PROJECT_DIR/genomes"
 while IFS=$'\t' read -r -a samples_array
 do
     BATCH="${samples_array[1]}"
     SAMPLE="${samples_array[2]}"
-    NAME="$(echo ${samples_array[15]} | tr " " "_" | sed 's/[_[:space:]]*$//')" # substitute spaces with underscores and remove and trailing spaces or underscores
+    NAME="$(echo ${samples_array[15]} | tr " " "_" | sed 's/[_[:space:]]*$//')" # substitute spaces with underscores and remove any trailing spaces or underscores
     if [ "$BATCH" != "JGI" ] && [ "$BATCH" != "NCBI" ]; then
         if [ "${samples_array[14]}" = "culture" ]; then
             FILE="$PROJECT_DIR/spades/Sample_${BATCH}-AD-${SAMPLE}-isolate/scaffolds_trimmed.fasta"
@@ -271,10 +278,10 @@ do
 done < $SAMPLE_LIST
 ```
 
-If you skipped genome assembly, you can download the assembled genomes from NCBI. 
+Conversely, if you skipped genome assembly, you can download the assembled genomes from JGI and NCBI. See the instructions for the previous block of code on how to download genomes from JGI.  
 
 ```
-GENOMES_DIR="$PROJECT_DIR/genomes"
+export GENOMES_DIR="$PROJECT_DIR/genomes"
 while IFS=$'\t' read -r -a samples_array
 do
     NAME="$(echo ${samples_array[15]} | tr " " "_" | sed 's/[_[:space:]]*$//')"
@@ -293,7 +300,9 @@ do
 done < $SAMPLE_LIST
 ```
 
-###  2.8. <a name='Downloadoutgroupgenomes'></a>Download outgroup genomes
+###  2.8. <a name='TODO:Downloadoutgroupgenomes'></a>TO DO: Download outgroup genomes
+
+TO DO: Maybe change 7th column (WGS accession) to GenBank accessions when I have it and change 2 for samples_array NCBI to 6. 
 
 ```
 while IFS=$'\t' read -r -a samples_array
@@ -317,13 +326,13 @@ done < $SAMPLE_LIST
 ###  2.9. <a name='Calculategenomecoverage'></a>Calculate genome coverage
 
 ```
-sbatch $PROJECT_DIR/scripts/9_calculate_coverage.sh $PROJECT_DIR
+sbatch $PROJECT_DIR/scripts/09_calculate_coverage.sh
 ```
 
 ###  2.10. <a name='ExtractrDNAsequences'></a>Extract rDNA sequences
 
 ```
-sbatch $PROJECT_DIR/scripts/10_extract_rdna.sh $PROJECT_DIR
+sbatch $PROJECT_DIR/scripts/10_extract_rdna.sh
 ```
 
 ###  2.11. <a name='RunBUSCO'></a>Run BUSCO
@@ -335,7 +344,7 @@ cd $PROJECT_DIR/busco
 busco --download ascomycota_odb10
 for SAMPLE in $PROJECT_DIR/genomes/*
 do
-    sbatch $PROJECT_DIR/scripts/6_run_busco.sh $PROJECT_DIR $SAMPLE
+    sbatch $PROJECT_DIR/scripts/06_run_busco.sh $SAMPLE
 done
 ```
 
@@ -344,9 +353,12 @@ done
 The BUSCO phylogenomics pipeline is used for coalescence and to prepare the dataset for `IQTREE2` concatenation analysis. You will need to define the path to the `ASTRAL` library files and `ASTRAL` jar file, e.g., `"/home/adirks/apps/ASTRAL/Astral/lib/"` and `"/home/adirks/apps/ASTRAL/Astral/astral.5.15.5.jar"`.
 
 ```
-ASTRAL_LIB_PATH=""
-ASTRAL_JAR_PATH=""
-sbatch $PROJECT_DIR/scripts/7_phylogenomics.sh $PROJECT_DIR $ASTRAL_LIB_PATH $ASTRAL_JAR_PATH
+export ASTRAL_LIB_PATH="/path/to/Astral/lib/"
+export ASTRAL_JAR_PATH="/path/to/astral.5.15.5.jar"
+# consider running the following code to find the paths if available, although find can take a while
+# find / -name "astral.5.15.5.jar"
+
+sbatch $PROJECT_DIR/scripts/07_phylogenomics.sh
 ```
 
 ##  3. <a name='Genomeannotationandsummarystatistics'></a> Genome annotation and summary statistics
@@ -355,7 +367,7 @@ Genome annotation is completed with `Funannotate`, available through [GitHub](ht
 
 ###  3.1. <a name='Predictgenes'></a>Predict genes
 
-First, predict genes. The JGI Gyromitra esculenta expressed sequence tags (EST) file is used to help with gene prediction. 
+First, predict genes. The JGI <i>Gyromitra esculenta</i> expressed sequence tags (EST) file is used to help with gene prediction. 
 
 ```
 conda deactivate
@@ -371,12 +383,12 @@ do
     ACCESSION="${samples_array[11]}"
     NAME="$(echo ${samples_array[15]} | tr " " "_" | sed 's/[_[:space:]]*$//')"
     if [ "${samples_array[7]}" = "ingroup" ]; then
-        sbatch $PROJECT_DIR/scripts/8a_run_funannotate_predict.sh -p $PROJECT_DIR -s "'"$SPECIES"'" -i $ACCESSION -g $GENOMES_DIR/$NAME.fasta
+        sbatch $PROJECT_DIR/scripts/08a_run_funannotate_predict.sh -s "'"$SPECIES"'" -i $ACCESSION -g $GENOMES_DIR/$NAME.fasta
     fi
 done < $SAMPLE_LIST
 ```
 
-At this point, an NCBI bioproject number, individual biosample numbers, and a submission template (`.sbt` file) were generated before continuing with annotation. 
+At this point, an NCBI bioproject number, individual biosample numbers, and a submission template (`.sbt` file) were generated before continuing with annotation. The `template.sbt` file I used is available in the `misc` directory.
 
 ###  3.2. <a name='Identifysecondarymetabolitebiosynthesisgeneclusters'></a>Identify secondary metabolite biosynthesis gene clusters
 
@@ -391,7 +403,7 @@ do
     ACCESSION="${samples_array[11]}"
     NAME="$(echo ${samples_array[15]} | tr " " "_" | sed 's/[_[:space:]]*$//')"
     if [ "${samples_array[7]}" = "ingroup" ]; then
-        sbatch $PROJECT_DIR/scripts/8b_run_antismash7.sh -p $PROJECT_DIR -s "'"$SPECIES"'" -i $ACCESSION -g $GENOMES_DIR/$NAME.fasta
+        sbatch $PROJECT_DIR/scripts/08b_run_antismash7.sh -s "'"$SPECIES"'" -i $ACCESSION -g $GENOMES_DIR/$NAME.fasta
     fi
 done < $SAMPLE_LIST
 ```
@@ -409,7 +421,7 @@ do
     ACCESSION="${samples_array[11]}"
     NAME="$(echo ${samples_array[15]} | tr " " "_" | sed 's/[_[:space:]]*$//')"
     if [ "${samples_array[7]}" = "ingroup" ]; then
-        sbatch $PROJECT_DIR/scripts/8c_run_interproscan.sh -p $PROJECT_DIR -s "'"$SPECIES"'" -i $ACCESSION -g $GENOMES_DIR/$NAME.fasta
+        sbatch $PROJECT_DIR/scripts/08c_run_interproscan.sh -s "'"$SPECIES"'" -i $ACCESSION -g $GENOMES_DIR/$NAME.fasta
     fi
 done < $SAMPLE_LIST
 ```
@@ -424,7 +436,7 @@ do
     LOCUS_TAG="${samples_array[3]}"
     NAME="$(echo ${samples_array[15]} | tr " " "_" | sed 's/[_[:space:]]*$//')"
     if [ "${samples_array[7]}" = "ingroup" ]; then
-        sbatch $PROJECT_DIR/scripts/8d_run_funannotate_annotate.sh -p $PROJECT_DIR -g $GENOMES_DIR/$NAME.fasta -l $LOCUS_TAG
+        sbatch $PROJECT_DIR/scripts/08d_run_funannotate_annotate.sh -g $GENOMES_DIR/$NAME.fasta -l $LOCUS_TAG
     fi
 done < $SAMPLE_LIST
 ```
@@ -434,22 +446,40 @@ done < $SAMPLE_LIST
 Get genome stats.
 
 ```
-bash $PROJECT_DIR/scripts/11a_summarize_genome_stats.sh $PROJECT_DIR
+bash $PROJECT_DIR/scripts/11a_summarize_genome_stats.sh
 ```
 
 Get `antiSMASH` secondary metabolite gene cluster counts.
 
 ```
-bash $PROJECT_DIR/scripts/11b_summarize_antismash_counts.sh $PROJECT_DIR
+bash $PROJECT_DIR/scripts/11b_summarize_antismash_counts.sh
 ```
 
 Get CAZyme family counts. 
 
 ```
-bash $PROJECT_DIR/scripts/11c_summarize_cazyme_counts.sh $PROJECT_DIR
+bash $PROJECT_DIR/scripts/11c_summarize_cazyme_counts.sh
 ```
 
-##  4. <a name='TODO:Matingsystemanalysis'></a>TO DO: Mating system analysis 
+##  4. <a name='Matingsystemanalysis'></a>Mating system analysis 
+
+###  4.1. <a name='Softlinkproteomesintoonedirectory'></a>Soft link proteomes into one directory
+
+```
+bash $PROJECT_DIR/12_ln_proteomes.sh
+```
+
+###  4.2. <a name='MakeproteomesBLASTdatabase'></a>Make proteomes BLAST database
+
+```
+bash $PROJECT_DIR/13_make_blast_db.sh
+```
+
+###  4.3. <a name='IdentifyMATgenesandcreateclinkermap'></a>Identify MAT genes and create clinker map
+
+```
+bash $PROJECT_DIR/14_blast_mat_genes.sh
+```
 
 ##  5. <a name='TODO:Figuresandstatisticalanalysis'></a>TO DO: Figures and statistical analysis
 
@@ -531,4 +561,4 @@ Follow these instructions to upload your data:
 
 ####  6.2.4. <a name='Genomes'></a>Genomes
 
-Submit genomes [here](https://submit.ncbi.nlm.nih.gov/about/genome/). You are going to upload a `.fasta` file for an unannotated genome or a `.sqn` file for an annotated genome (generated by `Funannotate`). Follow the instructions above for SRA files to upload the genome files. Make sure to put all your `.fasta` or `.sqn` files together in the same directory. I recommend only uploading the genomes (unannotate FASTA file) because NCBI will probably identify some issues with the annotation that might be difficult to resolve. 
+Submit genomes [here](https://submit.ncbi.nlm.nih.gov/about/genome/). You are going to upload a `.fasta` file for an unannotated genome or a `.sqn` file for an annotated genome (generated by `Funannotate`). Follow the instructions above for SRA files to upload the genome files. Make sure to put all your `.fasta` or `.sqn` files together in the same directory. I recommend only uploading the genomes (unannotated FASTA file) because NCBI will probably identify some issues with the annotation that might be difficult to resolve. 

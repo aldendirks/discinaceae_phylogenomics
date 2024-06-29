@@ -19,9 +19,8 @@ module load Bioinformatics
 module load spades/3.15.5-jhe6qq2
 
 # Set variables
-PROJECT_DIR=$1
-BATCH=$2
-SAMPLE=$3
+BATCH=$1
+SAMPLE=$2
 
 # Run SPAdes error correction
 mkdir -p $PROJECT_DIR/seqs/corrected_spades/Sample_$BATCH-AD-$SAMPLE
